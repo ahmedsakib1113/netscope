@@ -1,0 +1,248 @@
+{
+  "title": "Real Windows Wi-Fi capture",
+  "mode": "recorded",
+  "interface": "Wi-Fi",
+  "target": "1.1.1.1",
+  "started_at_utc": "2026-11-06T03:39:14.745217+00:00",
+  "duration_seconds": 60.071,
+  "sample_interval_seconds": 2.0,
+  "probe_interval_seconds": 10.0,
+  "samples": [
+    {
+      "download_mbps": null,
+      "upload_mbps": null,
+      "quality": "baseline",
+      "seconds": 0.032
+    },
+    {
+      "download_mbps": 1.657971346706991,
+      "upload_mbps": 0.050448901623751236,
+      "quality": "ok",
+      "seconds": 2.125
+    },
+    {
+      "download_mbps": 1.7994231136572454,
+      "upload_mbps": 0.12267430754531146,
+      "quality": "ok",
+      "seconds": 4.213
+    },
+    {
+      "download_mbps": 1.8031826686369925,
+      "upload_mbps": 0.11095617922211057,
+      "quality": "ok",
+      "seconds": 6.247
+    },
+    {
+      "download_mbps": 1.7268347659972978,
+      "upload_mbps": 0.12004584527215124,
+      "quality": "ok",
+      "seconds": 8.34
+    },
+    {
+      "download_mbps": 1.722785645003415,
+      "upload_mbps": 0.08301066925308315,
+      "quality": "ok",
+      "seconds": 10.398
+    },
+    {
+      "download_mbps": 1.9284032961722306,
+      "upload_mbps": 0.12679786718381858,
+      "quality": "ok",
+      "seconds": 12.473
+    },
+    {
+      "download_mbps": 16.894170352941178,
+      "upload_mbps": 0.8137449411764706,
+      "quality": "ok",
+      "seconds": 14.585
+    },
+    {
+      "download_mbps": 55.6139359770463,
+      "upload_mbps": 2.886150023888111,
+      "quality": "ok",
+      "seconds": 16.68
+    },
+    {
+      "download_mbps": 13.233574590967482,
+      "upload_mbps": 0.822078922041333,
+      "quality": "ok",
+      "seconds": 18.764
+    },
+    {
+      "download_mbps": 4.746794312794899,
+      "upload_mbps": 0.3417099526065408,
+      "quality": "ok",
+      "seconds": 20.87
+    },
+    {
+      "download_mbps": 7.726545101836437,
+      "upload_mbps": 0.43225994180371374,
+      "quality": "ok",
+      "seconds": 22.936
+    },
+    {
+      "download_mbps": 13.079374015752903,
+      "upload_mbps": 0.7853228346459618,
+      "quality": "ok",
+      "seconds": 24.969
+    },
+    {
+      "download_mbps": 10.083650262777052,
+      "upload_mbps": 0.4799503105588327,
+      "quality": "ok",
+      "seconds": 27.062
+    },
+    {
+      "download_mbps": 13.491578740162504,
+      "upload_mbps": 0.7146732283467228,
+      "quality": "ok",
+      "seconds": 29.087
+    },
+    {
+      "download_mbps": 18.135110669980424,
+      "upload_mbps": 0.996803970223613,
+      "quality": "ok",
+      "seconds": 31.106
+    },
+    {
+      "download_mbps": 17.561948424060713,
+      "upload_mbps": 0.805661891117109,
+      "quality": "ok",
+      "seconds": 33.197
+    },
+    {
+      "download_mbps": 17.772767908301304,
+      "upload_mbps": 0.9322788920721607,
+      "quality": "ok",
+      "seconds": 35.292
+    },
+    {
+      "download_mbps": 16.58848108633941,
+      "upload_mbps": 0.8507740058203852,
+      "quality": "ok",
+      "seconds": 37.364
+    },
+    {
+      "download_mbps": 16.01630494117647,
+      "upload_mbps": 0.7889807058823529,
+      "quality": "ok",
+      "seconds": 39.48
+    },
+    {
+      "download_mbps": 11.033116458125713,
+      "upload_mbps": 0.5782637151103108,
+      "quality": "ok",
+      "seconds": 41.569
+    },
+    {
+      "download_mbps": 55.571297039134016,
+      "upload_mbps": 3.9943686723954936,
+      "quality": "ok",
+      "seconds": 43.659
+    },
+    {
+      "download_mbps": 15.482664100113377,
+      "upload_mbps": 0.7908565928786422,
+      "quality": "ok",
+      "seconds": 45.735
+    },
+    {
+      "download_mbps": 5.253698094766937,
+      "upload_mbps": 0.29529653150919444,
+      "quality": "ok",
+      "seconds": 47.785
+    },
+    {
+      "download_mbps": 10.129946352941175,
+      "upload_mbps": 1.4000225882352941,
+      "quality": "ok",
+      "seconds": 49.904
+    },
+    {
+      "download_mbps": 4.856568,
+      "upload_mbps": 0.295568,
+      "quality": "ok",
+      "seconds": 51.912
+    },
+    {
+      "download_mbps": 8.705046588235295,
+      "upload_mbps": 0.3695924705882353,
+      "quality": "ok",
+      "seconds": 54.028
+    },
+    {
+      "download_mbps": 8.875816838999764,
+      "upload_mbps": 0.41489709502727645,
+      "quality": "ok",
+      "seconds": 56.06
+    },
+    {
+      "download_mbps": 5.008500705882353,
+      "upload_mbps": 0.20041035294117648,
+      "quality": "ok",
+      "seconds": 58.193
+    }
+  ],
+  "probes": [
+    {
+      "sent": 4,
+      "received": 4,
+      "min_ms": 37.0,
+      "mean_ms": 38.25,
+      "max_ms": 40.0,
+      "loss_percent": 0.0,
+      "measurement_error": 0,
+      "seconds": 1.503
+    },
+    {
+      "sent": 4,
+      "received": 4,
+      "min_ms": 36.0,
+      "mean_ms": 37.75,
+      "max_ms": 41.0,
+      "loss_percent": 0.0,
+      "measurement_error": 0,
+      "seconds": 11.173
+    },
+    {
+      "sent": 4,
+      "received": 4,
+      "min_ms": 57.0,
+      "mean_ms": 62.0,
+      "max_ms": 67.0,
+      "loss_percent": 0.0,
+      "measurement_error": 0,
+      "seconds": 21.37
+    },
+    {
+      "sent": 4,
+      "received": 4,
+      "min_ms": 37.0,
+      "mean_ms": 40.25,
+      "max_ms": 50.0,
+      "loss_percent": 0.0,
+      "measurement_error": 0,
+      "seconds": 31.256
+    },
+    {
+      "sent": 4,
+      "received": 4,
+      "min_ms": 38.0,
+      "mean_ms": 39.5,
+      "max_ms": 43.0,
+      "loss_percent": 0.0,
+      "measurement_error": 0,
+      "seconds": 41.234
+    },
+    {
+      "sent": 4,
+      "received": 4,
+      "min_ms": 37.0,
+      "mean_ms": 38.25,
+      "max_ms": 40.0,
+      "loss_percent": 0.0,
+      "measurement_error": 0,
+      "seconds": 51.324
+    }
+  ]
+}

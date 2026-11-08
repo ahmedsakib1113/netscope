@@ -13,3 +13,4 @@ jobs:
       - run: python -m pip install -r requirements-lock.txt
       - run: python -m pip install -e . --no-deps
       - run: python -m pytest -q
+      - run: node --test tests/web-demo.test.mjs

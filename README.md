@@ -1,5 +1,9 @@
 # NetScope — Network Monitoring & Analytics
 
+Live site: [https://ahmedsakib1113.github.io/netscope/](https://ahmedsakib1113.github.io/netscope/)
+
+The public web demo explores a real recorded session. Run the Windows collector and Streamlit dashboard locally for live monitoring.
+
 A Windows-first Python project that turns real laptop network measurements into an interactive dashboard and a queryable history. Built to connect networking concepts with data collection, SQL and exploratory analysis.
 
 **Phase 1:** interface throughput, ICMP round-trip latency, probe packet loss, local persistence and tests.
@@ -7,6 +11,18 @@ A Windows-first Python project that turns real laptop network measurements into 
 ![NetScope displaying real Windows network measurements](docs/dashboard-charts.png)
 
 The screenshot shows a completed real capture. Recorded values remain available after the collector stops. See the [overview screenshot](docs/dashboard-overview.png) for the metric cards and session controls.
+
+## Hosted preview
+
+The [live site](https://ahmedsakib1113.github.io/netscope/) is an interactive view of a completed real Wi-Fi recording, with history windows, throughput/latency charts, measurement definitions, and a traffic CSV download. It displays historical data; it does not monitor the visitor's computer.
+
+The preview lives in `docs/` and is hosted for free with GitHub Pages. To refresh its minimal public snapshot from a completed local recording against `1.1.1.1`:
+
+```powershell
+.\.venv\Scripts\python.exe scripts/export_web_demo.py
+```
+
+The exporter opens SQLite read-only. It exports timing, throughput, probe results, and quality labels; the raw database, machine identifiers, other interfaces, and private target addresses remain local. Preview calculations can be checked with `node --test tests/web-demo.test.mjs` (Node 20+).
 
 ## What it does
 

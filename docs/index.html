@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore a real recorded Windows network-monitoring session in NetScope. Throughput, latency, packet loss, and measurement methodology.">
+  <title>NetScope · Network Monitoring & Analytics</title>
+  <link rel="stylesheet" href="preview.css">
+  <script type="module" src="demo.mjs"></script>
+</head>
+<body>
+  <header><nav><a class="brand" href="./"><span class="brand-icon">N</span>NetScope<span class="brand-detail">NETWORK ANALYTICS</span></a><div class="nav-links"><a href="#recording">Recording</a><a href="#method">How it works</a><a href="https://github.com/ahmedsakib1113/netscope">GitHub ↗</a></div></nav></header>
+  <main>
+    <div class="eyebrow">REAL MEASUREMENTS / RECORDED SESSION</div>
+    <section class="hero"><div><h1>A closer look at<br><span>your network.</span></h1><p>Traffic, latency, and packet loss — captured on a real Windows laptop and explained through the data.</p></div><div class="hero-note"><span class="status-dot"></span> Historical capture<br><small>This public demo explores a saved recording.<br>Run the Python app locally for live monitoring.</small></div></section>
+    <div id="loading" role="status">Loading the recorded session…</div>
+    <div id="dashboard" hidden>
+      <section id="recording" class="session-bar"><div><b>Wi-Fi</b><span class="muted"> / </span><span id="capture-date"></span></div><label>History window <select id="window"><option value="all">Full recording</option><option value="30">Last 30 seconds</option><option value="15">Last 15 seconds</option></select></label></section>
+      <section class="metrics" aria-label="Metrics for the selected recording interval">
+        <article class="metric"><span class="metric-label">↓ Latest download</span><div><strong id="download">—</strong><span class="unit">Mbps</span></div><small id="peak"></small></article>
+        <article class="metric"><span class="metric-label">↑ Latest upload</span><div><strong id="upload">—</strong><span class="unit">Mbps</span></div><small>Observed interface traffic</small></article>
+        <article class="metric"><span class="metric-label">↔ Mean ICMP latency</span><div><strong id="latency">—</strong><span class="unit">ms</span></div><small>Weighted by successful replies</small></article>
+        <article class="metric"><span class="metric-label">◌ Probe packet loss</span><div><strong id="loss">—</strong><span class="unit">%</span></div><small id="replies"></small></article>
+      </section>
+      <section class="panel"><div class="panel-heading"><div><h2>Interface throughput</h2><p id="selected"></p></div><div class="legend"><span><i class="green"></i>Download</span><span><i class="blue"></i>Upload</span></div></div><div id="traffic-chart" class="chart"></div><div class="panel-foot">Mbps · time since recording began <span>Hover over a point for its measured value</span></div></section>
+      <div class="columns"><section class="panel"><div class="panel-heading"><div><h2>Round-trip latency</h2><p>Windows .NET ICMP batches → 1.1.1.1</p></div></div><div id="latency-chart" class="chart"></div><div class="panel-foot">Mean RTT per completed batch · milliseconds</div></section><section class="panel details"><div class="eyebrow">CAPTURE DETAILS</div><h2>Small session.<br>Real observations.</h2><dl><div><dt>Duration</dt><dd id="duration"></dd></div><div><dt>Traffic observations</dt><dd id="sample-count"></dd></div><div><dt>Interface</dt><dd>Wi-Fi</dd></div><div><dt>Probe target</dt><dd>1.1.1.1</dd></div><div><dt>Collection platform</dt><dd>Windows / Python</dd></div></dl><a class="button secondary" href="recorded-traffic.csv" download>Download recorded traffic ↓</a></section></div>
+      <details class="panel"><summary>Explore the recorded observations</summary><div class="table-scroll"><table><thead><tr><th>Elapsed</th><th>Download (Mbps)</th><th>Upload (Mbps)</th><th>Quality</th></tr></thead><tbody id="observations"></tbody></table></div><p class="muted">The initial observation establishes a baseline; its missing rates remain missing.</p></details>
+    </div>
+    <section id="method" class="method"><div class="eyebrow">FROM COUNTERS TO CONTEXT</div><h2>Understand what the numbers mean.</h2><div class="method-grid"><article><span>01 / TRAFFIC</span><h3>Measure the delta.</h3><p>psutil reads interface byte counters. Counter changes × 8 ÷ actual elapsed seconds ÷ 1,000,000 give decimal Mbps. This measures observed traffic, not maximum internet speed.</p></article><article><span>02 / CONNECTIVITY</span><h3>Probe one route.</h3><p>Four ICMP requests form a batch. Packet loss uses total sent and received requests; latency averages successful replies. Execution errors are excluded from loss.</p></article><article><span>03 / HISTORY</span><h3>Keep the evidence.</h3><p>The independent collector saves sessions to SQLite. Streamlit reads the history for charts and CSV exports. This page reads a minimal export of a completed recording.</p></article></div><p class="scope-note">A short recording cannot establish long-term reliability. ICMP filtering can differ from application traffic, and probes follow Windows routing, which may use a VPN. Interface counters are kept separate to avoid double counting.</p></section>
+    <section class="source-panel"><div><h2>Explore the complete project.</h2><p>Run the collector and interactive Streamlit dashboard on Windows.<br>Inspect the real dashboard screenshots and the validation evidence.</p></div><div class="source-links"><a class="button" href="https://github.com/ahmedsakib1113/netscope#run-on-windows">Run NetScope ↗</a><a class="button secondary" href="dashboard-charts.png">Original dashboard screenshot ↗</a></div></section>
+    <footer>NetScope · Python / psutil / SQLite / Streamlit · <a href="https://github.com/ahmedsakib1113/netscope">Source code</a><br>Public preview: recorded measurements. Live laptop monitoring runs locally. No traffic capture or packet payloads are published.</footer>
+  </main>
+</body>
+</html>

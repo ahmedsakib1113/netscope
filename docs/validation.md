@@ -54,4 +54,4 @@ Screenshots: [overview](dashboard-overview.png), [charts](dashboard-charts.png).
 
 ## Remaining boundaries
 
-Live collection currently targets Windows; other platforms receive an explicit unsupported ICMP measurement error. Retention, background-service installation, anomaly detection and switch telemetry remain future work. Publishing the repository does not host the dashboard; run it locally using the README instructions.
+Live collection currently targets Windows; other platforms receive an explicit unsupported ICMP measurement error. Retention, background-service installation, anomaly detection and switch telemetry remain future work. The public GitHub Pages preview explores a recorded session; the full Streamlit dashboard and Windows collector run locally using the README instructions.
