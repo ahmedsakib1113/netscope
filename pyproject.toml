@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netscope-monitor"
+version = "0.1.0"
+description = "Local Windows network monitoring with honest measurements and persistent history"
+requires-python = ">=3.12"
+dependencies = ["psutil>=6.1,<8", "streamlit>=1.50,<2", "pandas>=2.2,<4", "altair>=5,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+netscope = "netscope.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
